@@ -103,42 +103,10 @@ default['cf10']['java']['home'] = nil
 # CF Updates
 default['cf10']['updates']['urls'] = %w{ 
   http://download.macromedia.com/pub/coldfusion/10/cf10_mdt_updt.jar 
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_001.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_002.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_004.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_005.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_006.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_007.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_008.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_009.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_010.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_011.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_012.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_013.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_014.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_015.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_016.jar
-  http://download.adobe.com/pub/adobe/coldfusion/hotfix_017.jar
   http://download.adobe.com/pub/adobe/coldfusion/hotfix_018.jar
 }
 default['cf10']['updates']['files'] = %w{ 
   hf1000-3332326.jar
-  chf10000001.jar
-  chf10000002.jar
-  chf10000004.jar
-  chf10000005.jar
-  chf10000006.jar
-  chf10000007.jar
-  chf10000008.jar
-  chf10000009.jar
-  chf10000010.jar
-  chf10000011.jar
-  chf10000012.jar
-  chf10000013.jar
-  chf10000014.jar
-  chf10000015.jar
-  chf10000016.jar
-  chf10000017.jar
   chf10000018.jar
 }
 

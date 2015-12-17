@@ -48,6 +48,15 @@ execute "install_wsconfig" do
       cp -f #{node['apache']['dir']}/conf/mod_jk.conf #{node['apache']['dir']}/conf.d/mod_jk.conf
       sleep 11
       COMMAND
+    when "debian"
+      command <<-COMMAND
+      sleep 11
+      ln -s #{node['apache']['dir']}/apache2.conf #{node['apache']['dir']}/httpd.conf
+      #{node['cf10']['installer']['install_folder']}/cfusion/runtime/bin/wsconfig -ws Apache -dir #{node['apache']['dir']} -bin #{node['apache']['binary']} -script /usr/sbin/apache2ctl -v
+      cp -f #{node['apache']['dir']}/mod_jk.conf #{node['apache']['dir']}/mods-available/mod_jk.conf
+      ln -s #{node['apache']['dir']}/mods-available/mod_jk.conf #{node['apache']['dir']}/mods-enabled/mod_jk.conf
+      sleep 11
+      COMMAND
     else
       command <<-COMMAND
       sleep 11
