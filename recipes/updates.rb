@@ -82,13 +82,13 @@ node['cf10']['updates']['urls'].each do | update |
     end
 
     # Some updates require you to re-run wsconfig, so just do it if wsconfig is configured and an update was applied
-    execute "start_cf_for_coldfusion10_updater_wsconfig" do
-      command "/bin/true"
-      notifies :start, "service[coldfusion]", :delayed
-      notifies :run, "execute[uninstall_wsconfig]", :delayed
-      notifies :run, "execute[install_wsconfig]", :delayed
-      only_if "#{node['cf10']['installer']['install_folder']}/cfusion/runtime/bin/wsconfig -list | grep 'Apache : #{node['apache']['dir']}'"
-    end
+    # execute "start_cf_for_coldfusion10_updater_wsconfig" do
+    #   command "/bin/true"
+    #   notifies :start, "service[coldfusion]", :delayed
+    #   notifies :run, "execute[uninstall_wsconfig]", :delayed
+    #   notifies :run, "execute[install_wsconfig]", :delayed
+    #   only_if "#{node['cf10']['installer']['install_folder']}/cfusion/runtime/bin/wsconfig -list | grep 'Apache : #{node['apache']['dir']}'"
+    # end
 
     sudo sodo_name do
       user node['cf10']['installer']['runtimeuser']
