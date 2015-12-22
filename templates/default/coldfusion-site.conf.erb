@@ -1,3 +1,7 @@
+<IfModule mod_speling.c>
+    CheckSpelling On
+    CheckCaseOnly On
+</IfModule>
 <VirtualHost *:80>
   ServerAdmin <%= node['apache']['contact'] %>
 
