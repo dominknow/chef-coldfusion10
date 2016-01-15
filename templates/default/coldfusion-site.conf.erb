@@ -1,8 +1,11 @@
+Listen 8080    
+NameVirtualHost *:8080
+
 <IfModule mod_speling.c>
     CheckSpelling On
     CheckCaseOnly On
 </IfModule>
-<VirtualHost *:80>
+<VirtualHost *:80 *:8080>
   ServerAdmin <%= node['apache']['contact'] %>
 
   DocumentRoot <%= node['cf10']['webroot'] %>
